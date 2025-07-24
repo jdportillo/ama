@@ -160,6 +160,9 @@
             width: 100%;
             height: 100%;
             border: none;
+            /* Improve mobile compatibility */
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
         }
         
         .video-title {
@@ -252,10 +255,12 @@
             
             .video-container {
                 grid-template-columns: 1fr;
+                gap: 30px;
             }
             
             .video-wrapper {
-                min-height: 250px;
+                min-height: 200px;
+                padding-bottom: 56.25%; /* Maintain 16:9 aspect ratio */
             }
             
             .product-image {
@@ -323,12 +328,12 @@
                     <h3 class="video-title">Los beneficios del café enriquecido con ganoderma</h3>
                     <div class="video-wrapper">
                         <iframe 
-                            src="https://www.youtube.com/embed/Qoe-UnQFH2Q?autoplay=0&mute=0&controls=1&showinfo=1&rel=0"
+                            src="https://www.youtube.com/embed/Qoe-UnQFH2Q?rel=0&enablejsapi=1&origin=https://yourdomain.vercel.app"
                             title="Los beneficios del café enriquecido con ganoderma"
                             frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
                             allowfullscreen
-                            onload="trackVideoPlay('Video 1 - Beneficios del café')">
+                            loading="lazy">
                         </iframe>
                     </div>
                 </div>
@@ -338,12 +343,12 @@
                     <h3 class="video-title">Producción del ganoderma lucidum</h3>
                     <div class="video-wrapper">
                         <iframe 
-                            src="https://www.youtube.com/embed/34rXwz2AyjY?autoplay=0&mute=0&controls=1&showinfo=1&rel=0"
+                            src="https://www.youtube.com/embed/34rXwz2AyjY?rel=0&enablejsapi=1&origin=https://yourdomain.vercel.app"
                             title="Producción del ganoderma lucidum"
                             frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
                             allowfullscreen
-                            onload="trackVideoPlay('Video 2 - Producción del ganoderma')">
+                            loading="lazy">
                         </iframe>
                     </div>
                 </div>
